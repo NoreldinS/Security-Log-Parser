@@ -1,0 +1,26 @@
+2026-09-30 10:00:01 INFO 192.168.1.10 GET /index.html
+2026-09-30 10:00:15 INFO 192.168.1.12 GET /styles/main.css
+2026-09-30 10:01:03 WARNING 185.220.101.5 GET /login.php?user=' OR 1=1--
+2026-09-30 10:01:45 INFO 192.168.1.10 GET /about.html
+2026-09-30 10:02:10 WARNING 198.51.100.77 POST /login.php Failed login for user admin
+2026-09-30 10:02:12 WARNING 198.51.100.77 POST /login.php Failed login for user admin
+2026-09-30 10:02:15 WARNING 198.51.100.77 POST /login.php Failed login for user admin
+2026-09-30 10:02:18 WARNING 198.51.100.77 POST /login.php Failed login for user root
+2026-09-30 10:02:22 WARNING 198.51.100.77 POST /login.php Failed login for user administrator
+2026-09-30 10:03:10 WARNING 198.51.100.42 GET /download?file=../../etc/passwd
+2026-09-30 10:03:50 WARNING 45.33.32.156 GET /api/v1/ping?ip=127.0.0.1; whoami
+2026-09-30 10:04:18 WARNING 162.243.10.88 GET /admin/config.php User-Agent: Nikto
+2026-09-30 10:05:02 INFO 192.168.1.15 GET /dashboard
+2026-09-30 10:05:30 WARNING 203.0.113.195 GET /search.php?q=<script>alert('XSS')</script>
+2026-09-30 10:06:01 INFO 192.168.1.18 GET /products/view?id=45
+2026-09-30 10:06:44 WARNING 203.0.113.195 GET /profile?name=javascript:onerror=alert(1)
+2026-09-30 10:07:11 WARNING 198.51.100.42 GET /view.php?page=..\win.ini
+2026-09-30 10:08:05 WARNING 103.21.244.12 POST /login.php Failed login for user user1
+2026-09-30 10:08:08 WARNING 103.21.244.12 POST /login.php Failed login for user user1
+2026-09-30 10:08:12 WARNING 103.21.244.12 POST /login.php Failed login for user user1
+2026-09-30 10:08:15 WARNING 103.21.244.12 POST /login.php Failed login for user user1
+2026-09-30 10:09:01 INFO 192.168.1.20 GET /contact.html
+2026-09-30 10:09:40 WARNING 45.33.32.156 GET /exec?cmd=$(whoami)
+2026-09-30 10:10:15 WARNING 185.220.101.5 GET /api/items?cat=1 UNION SELECT * FROM users
+2026-09-30 10:11:00 WARNING 162.243.10.88 GET /phpmyadmin/ User-Agent: sqlmap/1.6.0
+2026-09-30 10:11:45 INFO 192.168.1.10 GET /logout

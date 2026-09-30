@@ -1,0 +1,86 @@
+[
+    {
+        "ip": "185.220.101.5",
+        "message": "GET /login.php?user=' OR 1=1--",
+        "attack_type": "SQL Injection",
+        "date": "2026-09-30 10:01:03",
+        "level": "WARNING"
+    },
+    {
+        "ip": "198.51.100.77",
+        "message": "POST /login.php Failed login for user root",
+        "attack_type": "Brute-force attack",
+        "date": "2026-09-30 10:02:18",
+        "level": "WARNING"
+    },
+    {
+        "ip": "198.51.100.77",
+        "message": "POST /login.php Failed login for user administrator",
+        "attack_type": "Brute-force attack",
+        "date": "2026-09-30 10:02:22",
+        "level": "WARNING"
+    },
+    {
+        "ip": "198.51.100.42",
+        "message": "GET /download?file=../../etc/passwd",
+        "attack_type": "Path Traversal",
+        "date": "2026-09-30 10:03:10",
+        "level": "WARNING"
+    },
+    {
+        "ip": "45.33.32.156",
+        "message": "GET /api/v1/ping?ip=127.0.0.1; whoami",
+        "attack_type": "Command Injection",
+        "date": "2026-09-30 10:03:50",
+        "level": "WARNING"
+    },
+    {
+        "ip": "203.0.113.195",
+        "message": "GET /search.php?q=<script>alert('XSS')</script>",
+        "attack_type": "Cross-Site Scripting (XSS)",
+        "date": "2026-09-30 10:05:30",
+        "level": "WARNING"
+    },
+    {
+        "ip": "203.0.113.195",
+        "message": "GET /profile?name=javascript:onerror=alert(1)",
+        "attack_type": "Cross-Site Scripting (XSS)",
+        "date": "2026-09-30 10:06:44",
+        "level": "WARNING"
+    },
+    {
+        "ip": "198.51.100.42",
+        "message": "GET /view.php?page=..\\win.ini",
+        "attack_type": "Path Traversal",
+        "date": "2026-09-30 10:07:11",
+        "level": "WARNING"
+    },
+    {
+        "ip": "103.21.244.12",
+        "message": "POST /login.php Failed login for user user1",
+        "attack_type": "Brute-force attack",
+        "date": "2026-09-30 10:08:15",
+        "level": "WARNING"
+    },
+    {
+        "ip": "45.33.32.156",
+        "message": "GET /exec?cmd=$(whoami)",
+        "attack_type": "Command Injection",
+        "date": "2026-09-30 10:09:40",
+        "level": "WARNING"
+    },
+    {
+        "ip": "185.220.101.5",
+        "message": "GET /api/items?cat=1 UNION SELECT * FROM users",
+        "attack_type": "SQL Injection",
+        "date": "2026-09-30 10:10:15",
+        "level": "WARNING"
+    },
+    {
+        "ip": "162.243.10.88",
+        "message": "GET /phpmyadmin/ User-Agent: sqlmap/1.6.0",
+        "attack_type": "Scanner Probe",
+        "date": "2026-09-30 10:11:00",
+        "level": "WARNING"
+    }
+]

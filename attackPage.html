@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="attack.css">
+    <title>Attack Alerts</title>
+</head>
+<body>
+    <h1>Attack Alerts</h1>
+    <table border ="1">
+        <thead>
+
+            <tr>
+                <th>IP Address</th>
+                <th>Message</th>
+                <th>Attack Type</th>
+                <th>Date</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+
+
+        <tbody id="TableBody">
+           
+        </tbody>
+
+    </table>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Total Log Lines</th>
+                <th>Total Threats Detected</th>
+            </tr>
+        </thead>
+        <tbody id="CountTableBody">
+            <!-- Count data will be populated here -->
+        </tbody>
+    </table>
+
+    <script>
+        fetch('count.json')
+            .then(response => response.json())
+            .then(data => {
+                const countTableBody = document.getElementById('CountTableBody');
+                data.forEach(countData => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${countData.total_log_lines}</td>
+                        <td>${countData.total_threats_detected}</td>
+                    `;
+                    countTableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching count data:', error));
+    </script>
+
+    <script>
+        fetch('alertfile.json')
+            .then(response => response.json())
+            .then(data => {
+
+                const tableBody = document.getElementById('TableBody');
+                data.forEach(alert => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${alert.ip}</td>
+                        <td>${alert.message}</td>
+                        <td>${alert.attack_type}</td>
+                        <td>${alert.date}</td>
+                        <td>${alert.level}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+
+            })
+            .catch(error => console.error('Error fetching alert data:', error));
+    </script>
+</body>
+
+</html>
+
